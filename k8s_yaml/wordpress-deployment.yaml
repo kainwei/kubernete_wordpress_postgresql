@@ -46,7 +46,8 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: kainvey/wpn4p01:v02
+      - image: kainvey/wpn4p01:php_latest_v03
+        imagePullPolicy: Always
         name: wordpress
         command: 
         - "docker-entrypoint.sh"
