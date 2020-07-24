@@ -6,7 +6,7 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 ### k8s_yaml: kubernete yaml files
 ### tools: This project dosn't depend on this directory. They are what I script tools help me to debug when I built this project.
 
-## building instruction
+## Building instruction
 Use restart.sh script, this script would stop first, then start, so when the first time to run it, some error would be happened and can be ignored.
 ```
 # cd k8s_yaml && sh restart.sh
@@ -60,5 +60,7 @@ Use port-forward to export the wordpress service port to see the page:
 # kubectl port-forward wordpress-7467bc8b64-494fv 80:80 --address 0.0.0.0
 Forwarding from 0.0.0.0:80 -> 80
 ```
+Then put the public ip of your host, you can see the wordpress page:
+![Kiku](screenshot/wordpress_first.png)
 
 
