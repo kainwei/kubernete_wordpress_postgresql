@@ -1,3 +1,3 @@
-docker build --no-cache --force-rm  -t wpn4p01:php_latest_v03 .
-docker tag wpn4p01:php_latest_v03 kainvey/wpn4p01:php_latest_v03
-docker push kainvey/wpn4p01:php_latest_v03
+docker build --no-cache --force-rm  -t wp4pg_redis:php_latest_v01 .
+docker tag wp4pg_redis:php_latest_v01 kainvey/wp4pg_redis:php_latest_v01 
+docker push kainvey/wp4pg_redis:php_latest_v01

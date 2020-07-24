@@ -46,7 +46,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: kainvey/wpn4p01:php_latest_v03
+      - image: kainvey/wp4pg_redis:php_latest_v01
         imagePullPolicy: Always
         name: wordpress
         command: 
