@@ -63,9 +63,15 @@ Forwarding from 0.0.0.0:80 -> 80
 Then put the public ip of your host, you can see the wordpress page:
 ![Kiku](screenshot/wordpress_first.png)
 
-## Open Rdis plugin
+## Open Redis plugin
 After create account as the instruction, we can login to wordpress and in the dashboard page click 'plugin':
 ![Kiku](screenshot/wp_dashboard.png)
+In the plugin page, put 'redis' to top right's search tool and enter, we can see the 'redis object cache' plugin and under this, click the 'Activate':
+![Kiku](screenshot/activate_redis.png)
+Then the Activate turn to Settings, click it and it would display the redis plugin configuration interface, click the 'Enable Object cache':
+![Kiku](screenshot/enable_redis_cache.png)
+If you see the 'Connected' status in the page, it means redis cache is working now:
+![Kiku](screenshot/redis_success.png)
 
 
 
