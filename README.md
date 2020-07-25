@@ -6,6 +6,14 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 ### k8s_yaml: kubernete yaml files
 ### tools: This project dosn't depend on this directory. They are what I script tools help me to debug when I built this project.
 
+## Working Block Diagram
+![Kiku](screenshot/wp_dashboard.png)
+
+## Step Zero: Prerequisites
+- You have a Kubernetes cluster installed and running.
+- That you have installed the ```kubectl``` command line tool installed in your path and configured to talk to your Kubernetes cluster
+- That your Kubernetes cluster is running [kube-dns](https://github.com/kubernetes/dns) or an equivalent integration.
+
 ## Building instruction
 Use restart.sh script, this script would stop first, then start, so when the first time to run it, some error would be happened and can be ignored.
 ```
