@@ -74,7 +74,7 @@ Forwarding from 0.0.0.0:80 -> 80
 Then put the public ip of your host into the browser and you can see the wordpress page:
 ![Kiku](screenshot/wordpress_first.png)
 
-## Open Redis plugin
+## Open Redis Plugin
 After create account as the instruction, we can login to wordpress and in the dashboard page click 'plugin':
 ![Kiku](screenshot/wp_dashboard.png)
 
