@@ -9,7 +9,7 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 ## Working Block Diagram
 ![Kiku](screenshot/wp_dashboard.png)
 
-## Step Zero: Prerequisites
+## Prerequisites
 - You have a Kubernetes cluster installed and running.
 - That you have installed the ```kubectl``` command line tool installed in your path and configured to talk to your Kubernetes cluster
 - That your Kubernetes cluster is running [kube-dns](https://github.com/kubernetes/dns) or an equivalent integration.
