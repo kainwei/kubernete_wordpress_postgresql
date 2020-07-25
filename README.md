@@ -87,7 +87,7 @@ Then the Activate turn to Settings, click it and it would display the redis plug
 If you see the 'Connected' status in the page, it means redis cache is working now:
 ![Kiku](screenshot/redis_success.png)
 
-##Additional Message
+## Additional Message
 - Stroage have been implemented by kubernete persisten volume and persistent volume claim, because I don't has a storage, so I use local host path as a demo. If you have a storage need to use [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/) to implement this part. That depends on which storage you are using. 
 - Loadbalance's scale up can be implemented by adjust deployments replicas.
 - About Networking I used flannel in my kubernete cluster environment. It's more easy to tune than Calico
