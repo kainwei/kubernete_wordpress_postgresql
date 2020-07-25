@@ -14,7 +14,7 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 - That you have installed the ```kubectl``` command line tool installed in your path and configured to talk to your Kubernetes cluster
 - That your Kubernetes cluster is running [kube-dns](https://github.com/kubernetes/dns) or an equivalent integration.
 
-## Building instruction
+## Building Steps
 Use restart.sh script, this script would stop first, then start, so when the first time to run it, some error would be happened and can be ignored.
 ```
 # cd k8s_yaml && sh restart.sh
@@ -80,6 +80,13 @@ Then the Activate turn to Settings, click it and it would display the redis plug
 ![Kiku](screenshot/enable_redis_cache.png)
 If you see the 'Connected' status in the page, it means redis cache is working now:
 ![Kiku](screenshot/redis_success.png)
+
+##Additional Message
+- Stroage have been implemented by kubernete persisten volume and persistent volume claim, because I don't has a storage, so I use local host path as a demo. If you have a storage need to use [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/) to implement this part. That depends on which storage you are using. 
+- Loadbalance's scale up can be implemented by adjust deployments replicas.
+- About Networking I used flannel in my kubernete cluster environment. It's more easy to tune than Calico
+- About the Security, I didn't concern them in this project, but I think Calico can be used for this purpose.
+- About image building, a standard implementation should use the Makefile, but I though a bash script is more easy to use and less dependency, so I used build.sh to run the image building logic.
 
 
 
