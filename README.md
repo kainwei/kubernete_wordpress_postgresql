@@ -6,7 +6,7 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 ### k8s_yaml: kubernete yaml files
 ### tools: This project dosn't depend on this directory. They are what I script tools help me to debug when I built this project.
 
-## Working Block Diagramwp4pg_redis_block_diagram.png
+## Working Block Diagram
 ![Kiku](screenshot/wp4pg_redis_block_diagram.png)
 
 ## Prerequisites
