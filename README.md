@@ -15,7 +15,7 @@ This is a demo to build a [wordpress](https://wordpress.org/) based on [Postgres
 - That your Kubernetes cluster is running [kube-dns](https://github.com/kubernetes/dns) or an equivalent integration.
 
 ## Building Steps
-Use restart.sh script, this script would stop first, then start, so when the first time to run it, some error would be happened and can be ignored.
+Use restart.sh script(this script would stop componets first then start them, so when the first time to run it, some error would be happened and can be ignored):
 ```
 # cd k8s_yaml && sh restart.sh
 Error from server (NotFound): error when deleting "./": secrets "postgresql-pass-m8tmhg2fg9" not found
@@ -41,7 +41,8 @@ persistentvolumeclaim/wp-pv-claim created
 service/redis4wp created
 deployment.apps/redis4wp created
 ```
-Then list the pods, deployment and service to confirm all of the component started up.
+
+Then list the pods, deployment and service to confirm all of the components started up.
 ```
 # kubectl get pods
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -63,21 +64,26 @@ redis4wp               ClusterIP      10.98.57.190   <none>        6379/TCP     
 wordpress              LoadBalancer   10.109.192.3   <pending>     80:32028/TCP   4m38s
 wordpress-postgresql   ClusterIP      None           <none>        5432/TCP       4m38s
 ```
-Use port-forward to export the wordpress service port to see the page:
+
+Use port-forward to export the wordpress service port to see the page temporarily:
 ```
 # kubectl port-forward wordpress-7467bc8b64-494fv 80:80 --address 0.0.0.0
 Forwarding from 0.0.0.0:80 -> 80
 ```
-Then put the public ip of your host, you can see the wordpress page:
+
+Then put the public ip of your host into the browser and you can see the wordpress page:
 ![Kiku](screenshot/wordpress_first.png)
 
 ## Open Redis plugin
 After create account as the instruction, we can login to wordpress and in the dashboard page click 'plugin':
 ![Kiku](screenshot/wp_dashboard.png)
+
 In the plugin page, put 'redis' to top right's search tool and enter, we can see the 'redis object cache' plugin and under this, click the 'Activate':
 ![Kiku](screenshot/activate_redis.png)
+
 Then the Activate turn to Settings, click it and it would display the redis plugin configuration interface, click the 'Enable Object cache':
 ![Kiku](screenshot/enable_redis_cache.png)
+
 If you see the 'Connected' status in the page, it means redis cache is working now:
 ![Kiku](screenshot/redis_success.png)
 
